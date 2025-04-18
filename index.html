@@ -175,6 +175,26 @@
         gap: 30px;
       }
 
+      @media (max-width: 768px) {
+       .nav-links {
+         display: none;
+         flex-direction: column;
+         background: var(--dark);
+         position: absolute;
+         top: 60px;
+         right: 20px;
+         width: 200px;
+         border-radius: var(--border-radius);
+         box-shadow: var(--shadow);
+         padding: 20px;    
+       }
+       .nav-links.show {
+        display: flex;
+       }
+       .mobile-menu-btn {
+        display: block;
+        }
+       }
       .nav-links a {
         font-weight: 500;
         position: relative;
