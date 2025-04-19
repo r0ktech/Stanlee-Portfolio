@@ -175,6 +175,45 @@
         gap: 30px;
       }
 
+      @media (max-width: 768px) {
+       .nav-links {
+         display: none;
+         flex-direction: column;
+         background: var(--dark);
+         position: absolute;
+         top: 60px;
+         right: 20px;
+         width: 200px;
+         border-radius: var(--border-radius);
+         box-shadow: var(--shadow);
+         padding: 20px;    
+       }
+       .nav-links.show {
+        display: flex;
+       }
+       .mobile-menu-btn {
+        display: block;
+        }
+
+
+        /* Light mode styles for mobile navigation menu */
+body.light-mode .nav-links {
+  background: rgba(255, 255, 255, 0.9); /* Light background */
+  color: var(--darker); /* Dark text for visibility */
+}
+
+body.light-mode .nav-links a {
+  color: var(--darker); /* Link text color */
+}
+
+body.light-mode .nav-links a:hover::after {
+  background: var(--primary); /* Retain hover underline color */
+}
+
+
+
+
+       }
       .nav-links a {
         font-weight: 500;
         position: relative;
